@@ -113,18 +113,18 @@
 					</div>
 					<div class="nameright">
 						<div class="selected">
-							<div class="selectvalue">
-								海佳彩亮
+							<div class="selectvalue" id="dropdown1">
+								2
 							</div>
 							<span class="drop1">
 								<img src="images/下.png">
 							</span>
 						</div>
 						<div class="down" id="drop1">
-							<div value="海佳彩亮">
-								1
+							<div class="dropdown1" value="海佳彩亮">
+								海佳彩亮
 							</div>
-							<div value="2">
+							<div class="dropdown1" value="2">
 								2
 							</div>
 						</div>
@@ -144,10 +144,20 @@
 	</div>
 </body>
 <script type="text/javascript">
-	$(".selected span").onclick(function(e) {
-		// body...
-		var id=this.id;
-		console.log(id);
-	});
+$(".selected span").on("click",function(){
+	var id=$(this).attr("class");
+	var m=$("#"+id).css("display");
+	if(m=="none"){
+			$("#"+id).css("display","block");
+		}else{
+			$("#"+id).css("display","none");
+		}
+})
+
+	$(".down div").on("click",function(){
+		var value=$(this).attr("value");
+		var id=$(this).attr("class");
+		$("#"+id).text(value);
+	})
 </script>
 </html>
