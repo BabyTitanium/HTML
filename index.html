@@ -5,170 +5,6 @@
 	<script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
  	<script type="text/javascript" src="js/jquery.reveal.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<style type="text/css">
-	body{
-		font-size: 18px;
-		font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
-	}
-	@media(min-width: 1000px){
-			body{
-			margin-left: 200px;
-			margin-right: 200px;
-			}
-		.body-left{
-			width:20%;
-		}
-	   .body-right{
-		  width: 80%;
-	}
-	}
-	@media(max-width: 1000px){
-			body{
-/*		margin-left: 100px;
-		margin-right: 100px;*/
-	}
-		.body-left{
-			width: 15%;
-		}
-		.body-right{
-			width: 85%;
-		}
-	}
-	.body-left{
-		height: 100%;
-		background: url("images/image2.png");
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-		float: left;
-
-	}
-	.body-right{
-		float: left;
-	}
-	.single-line{
-		height: 45px;
-		line-height: 45px;
-		width: 800px;
-	}
-	.line{
-		margin-left: 20px;
-	}
-	.sleft,.sright{
-		float: left;
-		width: 50%;
-	}
-	.radio{
-		display: inline-block;
-		width: 15px;
-		height: 15px;
-		border-radius: 15px;
-		border: 1px solid #1296db;
-		
-		margin-left: 5px;
-	}
-	.nameleft{
-		margin-right: 5px;
-		display: inline-block;
-		width: 100px;
-		text-align: right;
-	}
-	.nameright{
-		display: inline-block;
-		width: 200px;
-		height: 35px;
-		font-size: 16px;
-		padding: 5px;
-		z-index: 3;
-	}
-
-	.radio img{
-		display: block;
-	}
-	.selected{
-		width: 200px;
-		height: 35px;
-		border: 1px solid #b5b5b5;
-		line-height: 35px;
-	}
-	.selectvalue{
-		display: inline-block;
-		width: 170px;
-		padding-left: 5px;
-	}
-	.select span{
-		float: right;
-	}
-
-	.down{
-		display: none;
-		position: absolute;
-		width: 200px;
-	}
-	.down div{
-				background-color: #d6d4d4;
-				height: 30px;
-				line-height: 30px;
-				border-bottom: 1px solid #b5b5b5;
-				padding-left: 5px;
-				padding-right: 5px;
-	}
-	.unit{display: inline-block; width: 30px;color:#1296db }
-	.left{
-		width: 100px;
-		display: inline-block;
-		vertical-align: top;
-	}
-	.right{
-		width: 680px;
-		display: inline-block;
-		border-bottom: 1px solid #c2c2c2;
-		border-top: 1px solid #c2c2c2;
-		margin-left: 10px;
-		height: 120px;
-		overflow-y: scroll;
-	}
-	.rights{
-		width: 680px;
-		display: inline-block;
-
-	}
-	/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
-.right::-webkit-scrollbar
-{
-    width: 12px;
-    height: 16px;
-    background-color: #F5F5F5;
-}
- 
-/*定义滚动条轨道 内阴影+圆角*/
-.right::-webkit-scrollbar-track
-{
-    background-color: #c1ebff;
-}
- 
-/*定义滑块 内阴影+圆角*/
-.right::-webkit-scrollbar-thumb
-{
-   
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #76bff4;
-}
-	.blockdiv{
-		width: 220px;
-		margin-right: 10px;
-		display: inline-block;
-		font-size: 16px;
-		height: 30px;
-		line-height: 30px;
-	}
-	.blockdiv span{
-		margin-right: 20px;
-	}
-	.box{
-		height: 30px;
-		width: auto;
-	}
-	</style>
 </head>
 <body>
 	<div class="body-left">
@@ -247,23 +83,17 @@
 								2
 							</div>
 						</div>
-					
 					</div>
 					<div  class="unit">米 
 					</div>
 					
 				</div>
 			</div>
-
-				<div style="border-top:1px solid #e1dfdf; margin: 10 0px;width: 800px">
+			<div class="single-line">
+				<div class="label">
+					推荐型号
 				</div>
-			<div class="single-line" style="height: 120px">
-				<div class="left">
-					<div class="nameleft">
-						推荐型号
-					</div>
-				</div>
-				<div class="right">
+				<div class="single-box">
 					<div class="blockdiv">
 						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
 					</div>
@@ -287,13 +117,11 @@
 					</div>									
 				</div>
 			</div>
-			<div class="single-line" style="margin-top: 20px;height: 90px">
-				<div class="left">
-					<div class="nameleft">
-						控制方式
-					</div>
+			<div class="single-line">
+				<div class="label">
+					控制方式
 				</div>
-				<div class="right" style="height: 90px;">
+				<div class="single-box control">
 					<div class="blockdiv">
 						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
 					</div>
@@ -315,21 +143,35 @@
 				<div style="border-top:1px solid #e1dfdf; margin: 10 0px;width: 800px">
 				</div>
 			<div class="single-line" style="margin-top: 20px;height: 90px">
-				<div class="left">
-					<div class="nameleft">
-						屏幕尺寸
+				<div class="label">
+					屏幕尺寸
+				</div>
+				<div class="number-box-container">
+					<div class="number-box">
+						<div class="card">长（cm）</div>
+						<div class="card"> - </div>
+						<input type="number">
+						<div class="card"> + </div>
+					</div>
+					<div class="number-box">
+						<div class="card">高（cm）</div>
+						<div class="card"> - </div>
+						<input type="number">
+						<div class="card"> + </div>
 					</div>
 				</div>
-				<div class="rights" >
-					<div class="box">
-						长(cm)
-					</div>
-										
-				</div>
-			</div>			
+			</div>
+			<p class="submit-info">
+				<span class="blue">您选择的产品是：</span> 户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10户外P10
+			</p>
+			<a class="submit-btn big-link" data-reveal-id="quotation" data-animation="fade">
+				生成报价表
+			</a>
+			<p class="footer">
+				*此报价为参考价格，最终报价应与供应商商榷所得为准，咨询电话：<span class="phone">028-6232-8553</span>
+			</p>
 		</div>
 	</div>
-	<a href="#" class="big-link" data-reveal-id="quotation" data-animation="fade">jquery点我弹出</a>
 	<div id="quotation" class="reveal-modal">
 		<div class="quotation__container">
 			<div class="big_image">
