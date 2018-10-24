@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8">
+  <title>无标题文档</title>
+  <script src="http://www.jq22.com/jquery/1.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.reveal.js"></script>
+  <style type="text/css">
+    .reveal-modal-bg {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+      display: none;
+      top: 0;
+      left: 0;
+      background: rgba(00, 00, 00, 0.8)
+    }
+
+    .reveal-modal {
+      visibility: hidden;
+      top: 150px;
+      left: 50%;
+      margin-left: -300px;
+      width: 520px;
+      position: absolute;
+      z-index: 101;
+      padding: 30px 40px 34px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+      -box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+      background-color: #FFF;
+    }
+
+    .reveal-modal.small {
+      width: 200px;
+      margin-left: -140px;
+    }
+
+    .reveal-modal.medium {
+      width: 400px;
+      margin-left: -240px;
+    }
+
+    .reveal-modal.large {
+      width: 600px;
+      margin-left: -340px;
+    }
+
+    .reveal-modal.xlarge {
+      width: 800px;
+      margin-left: -440px;
+    }
+
+    .reveal-modal .close-reveal-modal {
+      font-size: 22px;
+      line-height: 0.5;
+      position: absolute;
+      top: 8px;
+      right: 11px;
+      color: #333;
+      text-shadow: 0 -1px 1px rbga(0, 0, 0, .6);
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    body {
+      background-color: #F2F2F2;
+    }
+  </style>
+  <!--[if lt IE 9]><style>.reveal-modal-bg{filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000,endColorstr=#cc000000);}</style><![endif]-->
+</head>
+
+<body><a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">jquery点我弹出</a>
+  <div id="myModal" class="reveal-modal">
+    <h1>jquery弹出层</h1>
+    <p>jQuery插件库 | jQuery-收集最全最新最好的jQuery插件 www.jq22.com</p> <a class="close-reveal-modal">&#215;</a>
+  </div>
+</body>
+
+</html>
