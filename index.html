@@ -44,6 +44,11 @@
 	.body-right{
 		float: left;
 	}
+	.single-line{
+		height: 45px;
+		line-height: 45px;
+		width: 800px;
+	}
 	.line{
 		margin-left: 20px;
 	}
@@ -57,11 +62,14 @@
 		height: 15px;
 		border-radius: 15px;
 		border: 1px solid #1296db;
-		margin-top: 5px;
+		
+		margin-left: 5px;
 	}
 	.nameleft{
-		margin-right: 20px;
-		display: inline;
+		margin-right: 5px;
+		display: inline-block;
+		width: 100px;
+		text-align: right;
 	}
 	.nameright{
 		display: inline-block;
@@ -71,11 +79,15 @@
 		padding: 5px;
 		z-index: 3;
 	}
+
+	.radio img{
+		display: block;
+	}
 	.selected{
 		width: 200px;
 		height: 35px;
-			border: 1px solid #b5b5b5;
-			line-height: 35px;
+		border: 1px solid #b5b5b5;
+		line-height: 35px;
 	}
 	.selectvalue{
 		display: inline-block;
@@ -99,6 +111,62 @@
 				padding-left: 5px;
 				padding-right: 5px;
 	}
+	.unit{display: inline-block; width: 30px;color:#1296db }
+	.left{
+		width: 100px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.right{
+		width: 680px;
+		display: inline-block;
+		border-bottom: 1px solid #c2c2c2;
+		border-top: 1px solid #c2c2c2;
+		margin-left: 10px;
+		height: 120px;
+		overflow-y: scroll;
+	}
+	.rights{
+		width: 680px;
+		display: inline-block;
+
+	}
+	/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+.right::-webkit-scrollbar
+{
+    width: 12px;
+    height: 16px;
+    background-color: #F5F5F5;
+}
+ 
+/*定义滚动条轨道 内阴影+圆角*/
+.right::-webkit-scrollbar-track
+{
+    background-color: #c1ebff;
+}
+ 
+/*定义滑块 内阴影+圆角*/
+.right::-webkit-scrollbar-thumb
+{
+   
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #76bff4;
+}
+	.blockdiv{
+		width: 220px;
+		margin-right: 10px;
+		display: inline-block;
+		font-size: 16px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.blockdiv span{
+		margin-right: 20px;
+	}
+	.box{
+		height: 30px;
+		width: auto;
+	}
 	</style>
 </head>
 <body>
@@ -117,7 +185,8 @@
 								2
 							</div>
 							<span class="drop1">
-								<img src="images/下.png">
+								<img  src="images/下.png">
+							
 							</span>
 						</div>
 						<div class="down" id="drop1">
@@ -135,11 +204,128 @@
 					<div class="nameleft">
 						使用环境
 					</div>
-					室内<div class="radio" id="room-in"><img src="images/对号.png"></div>
-					半户外<div class="radio" id="half-out"></div>
-					户外<div  class="radio" id="room-out"></div>
+					<div class="nameright">
+						<span>室内</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+						<span>半户外</span><div class="radio" id="halfout"><img  src="images/对号.png"></div>
+						<span>户外</span><div  class="radio" id="roomout"><img  src="images/对号.png"></div>
+					</div>
+					
 				</div>
 			</div>
+			<div class="single-line">
+				<div class="sleft">
+					<div class="nameleft">
+						使用环境
+					</div>
+					<div class="nameright">
+						<span>室内</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+						<span>半户外</span><div class="radio" id="halfout"><img  src="images/对号.png"></div>
+						<span>户外</span><div  class="radio" id="roomout"><img  src="images/对号.png"></div>
+					</div>
+
+				</div>
+				<div class="sright">
+					<div class="nameleft">
+					显示屏品牌
+					</div>
+					<div class="nameright">
+						<div class="selected">
+							<div class="selectvalue" id="dropdown2">
+								2
+							</div>
+							<span class="drop2">
+								<img  src="images/下.png">
+							</span>
+
+						</div>	
+						<div class="down" id="drop2">
+							<div class="dropdown2" value="海佳彩亮">
+								海佳彩亮
+							</div>
+							<div class="dropdown2" value="2">
+								2
+							</div>
+						</div>
+					
+					</div>
+					<div  class="unit">米 
+					</div>
+					
+				</div>
+			</div>
+
+				<div style="border-top:1px solid #e1dfdf; margin: 10 0px;width: 800px">
+				</div>
+			<div class="single-line" style="height: 120px">
+				<div class="left">
+					<div class="nameleft">
+						推荐型号
+					</div>
+				</div>
+				<div class="right">
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>	
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>									
+				</div>
+			</div>
+			<div class="single-line" style="margin-top: 20px;height: 90px">
+				<div class="left">
+					<div class="nameleft">
+						控制方式
+					</div>
+				</div>
+				<div class="right" style="height: 90px;">
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>	
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>
+					<div class="blockdiv">
+						<span>户外P10全彩LED屏</span><div class="radio" id="roomin"><img   src="images/对号.png"></div>
+					</div>
+										
+				</div>
+			</div>
+				<div style="border-top:1px solid #e1dfdf; margin: 10 0px;width: 800px">
+				</div>
+			<div class="single-line" style="margin-top: 20px;height: 90px">
+				<div class="left">
+					<div class="nameleft">
+						屏幕尺寸
+					</div>
+				</div>
+				<div class="rights" >
+					<div class="box">
+						长(cm)
+					</div>
+										
+				</div>
+			</div>			
 		</div>
 	</div>
 </body>
@@ -148,8 +334,11 @@ $(".selected span").on("click",function(){
 	var id=$(this).attr("class");
 	var m=$("#"+id).css("display");
 	if(m=="none"){
+
 			$("#"+id).css("display","block");
+
 		}else{
+
 			$("#"+id).css("display","none");
 		}
 })
@@ -159,5 +348,16 @@ $(".selected span").on("click",function(){
 		var id=$(this).attr("class");
 		$("#"+id).text(value);
 	})
+
+	$(".radio").on("click",function(){
+		var id=$(this).attr("id");
+		var m=$("#"+id+" img").attr("display");
+		console.log(m);
+		if(m=="none"){
+			$("#"+id+" img").css("display","block");
+		}else{
+			$("#"+id+" img").css("display","none");
+		}
+	});
 </script>
 </html>
