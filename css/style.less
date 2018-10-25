@@ -191,11 +191,12 @@ body {
 }
 .body-right {
   width: 820px;
+  padding-top: 30px;
 }
 
 .single-line {
   line-height: 45px;
-  width: 800px;
+  width: 815px;
   display: flex;
   margin-bottom: 20px;
   justify-content: space-between;
@@ -208,11 +209,26 @@ body {
     padding-right: 30px;
   }
 
-  .single-box {
+  .single-container {
     border: solid 1px #DCDCDC;
+    padding: 10px;
+  }
+
+  .single-box {
     overflow-y: scroll;
     padding: 0 20px;
     width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .radio-box {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      padding-right: 30px;
+    }
   }
 
   .number-box-container {
@@ -252,19 +268,52 @@ body {
   float: left;
   width: 50%;
 }
-.radio {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  border: 1px solid #1296db;
 
-  margin-left: 5px;
+.radio-line {
+  display: flex;
+}
+
+.radio-box {
+  display: flex;
+  align-items: center;
+  span {
+    font-size: 16px;
+    color: #8c8888;
+  }
+
+  .radio {
+    margin-left: 5px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    border: 2px solid #1296db;
+  }
+  
+  .active-radio {
+    background-image: url('../images/yes.png')
+  }
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+
+  .top-single {
+    width: 50%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .radio-box {
+      padding: 0 10px;
+    }
+  }
 }
 
 .nameleft {
   margin-right: 5px;
-  display: inline-block;
   width: 100px;
   font-weight: bold;
   text-align: right;
@@ -272,8 +321,7 @@ body {
 }
 
 .nameright {
-  display: inline-block;
-  width: 200px;
+  width: 250px;
   height: 35px;
   font-size: 16px;
   padding: 5px;
@@ -283,12 +331,22 @@ body {
 .radio img {
   display: block;
 }
-.selected {
-  width: 200px;
+.selector {
+  width: 100%;
   height: 35px;
   border: 1px solid #b5b5b5;
-  line-height: 35px;
+  appearance: none;/*清除select下拉框默认样式*/    
+  -moz-appearance: none;    
+  -webkit-appearance: none; 
+  border-radius: 0; 
+  padding: 0 10px;
+  outline-style: none;
+  font-size: 16px;
+  color: #8c8888;
+  padding-right: 14px;/*为下拉小箭头留出一点位置，避免被文字覆盖*/    
+  background: url("../images/下.png") no-repeat scroll right center transparent;/*自定义图片覆盖原有的下三角符号*/
 }
+
 .selectvalue {
   display: inline-block;
   width: 170px;
@@ -337,14 +395,16 @@ body {
 }
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 .single-box::-webkit-scrollbar {
-  width: 12px;
+  width: 3px;
   height: 16px;
+  padding-right: 3px;
   background-color: #f5f5f5;
 }
 
 /*定义滚动条轨道 内阴影+圆角*/
 .single-box::-webkit-scrollbar-track {
   background-color: #c1ebff;
+  border-radius: 1px;
 }
 
 /*定义滑块 内阴影+圆角*/
@@ -352,6 +412,11 @@ body {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #76bff4;
 }
+
+.single-box {
+  max-height: 90px;
+}
+
 .blockdiv {
   width: 220px;
   margin-right: 10px;
@@ -369,8 +434,8 @@ body {
 }
 
 .submit-info {
-  width: 620px;
-  margin-left: 160px;
+  width: 642px;
+  margin-left: 153px;
   font-size: 16px;
   color: #8c8888;
   line-height: 22px;
