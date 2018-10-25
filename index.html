@@ -154,15 +154,15 @@
 			<div class="number-box-container">
 				<div class="number-box">
 					<div class="card">长（cm）</div>
-					<div class="card"> - </div>
-					<input type="number">
-					<div class="card"> + </div>
+					<div class="card subtract" data-value="long"> - </div>
+					<input type="number" id="long" value=0>
+					<div class="card add" data-value="long"> + </div>
 				</div>
 				<div class="number-box">
 					<div class="card">高（cm）</div>
-					<div class="card"> - </div>
-					<input type="number">
-					<div class="card"> + </div>
+					<div class="card subtract" data-value="height"> - </div>
+					<input type="number" value=0 id="height">
+					<div class="card add" data-value="height"> + </div>
 				</div>
 			</div>
 		</div>
@@ -311,6 +311,20 @@
 		// 勾选当前
 		$(this).find('.radio').addClass('active-radio')
 	});
+
+	$(".subtract").on("click", function() {
+		var inputDom = $('#'+$(this).data('value'));
+		console.log(inputDom.val());
+		var value = Number(inputDom.val()) - 1;
+		inputDom.val(value--);
+	})
+
+	$(".add").on("click", function() {
+		var inputDom = $('#'+$(this).data('value'));
+		console.log(inputDom.val());
+		var value = Number(inputDom.val()) + 1;
+		inputDom.val(value);
+	})
 </script>
 
 </html>
